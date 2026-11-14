@@ -108,7 +108,8 @@ export namespace OrgSagebionetworksRepoModelDoiDoi {
     | 'GRID_SESSION'
     | 'RECORDSET'
     | 'SEARCH_INDEX'
-    | 'SOURCE_DEPENDENCY_EVENT';
+    | 'SOURCE_DEPENDENCY_EVENT'
+    | 'FORM_TEMPLATE';
   export const ObjectTypeEnum = {
     Entity: 'ENTITY' as ObjectTypeEnum,
     EntityContainer: 'ENTITY_CONTAINER' as ObjectTypeEnum,
@@ -161,5 +162,6 @@ export namespace OrgSagebionetworksRepoModelDoiDoi {
     Recordset: 'RECORDSET' as ObjectTypeEnum,
     SearchIndex: 'SEARCH_INDEX' as ObjectTypeEnum,
     SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as ObjectTypeEnum,
+    FormTemplate: 'FORM_TEMPLATE' as ObjectTypeEnum,
   };
 }

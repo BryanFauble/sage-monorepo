@@ -21,7 +21,8 @@ export type OrgSagebionetworksRepoModelFileFileHandleAssociateType =
   | 'AccessRequirementAttachment'
   | 'DataAccessRequestAttachment'
   | 'DataAccessSubmissionAttachment'
-  | 'FormData';
+  | 'FormData'
+  | 'FormTemplateAttachment';
 
 export const OrgSagebionetworksRepoModelFileFileHandleAssociateType = {
   FileEntity: 'FileEntity' as OrgSagebionetworksRepoModelFileFileHandleAssociateType,
@@ -43,4 +44,6 @@ export const OrgSagebionetworksRepoModelFileFileHandleAssociateType = {
   DataAccessSubmissionAttachment:
     'DataAccessSubmissionAttachment' as OrgSagebionetworksRepoModelFileFileHandleAssociateType,
   FormData: 'FormData' as OrgSagebionetworksRepoModelFileFileHandleAssociateType,
+  FormTemplateAttachment:
+    'FormTemplateAttachment' as OrgSagebionetworksRepoModelFileFileHandleAssociateType,
 };

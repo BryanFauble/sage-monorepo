@@ -89,7 +89,8 @@ export namespace OrgSagebionetworksRepoModelMessageComment {
     | 'GRID_SESSION'
     | 'RECORDSET'
     | 'SEARCH_INDEX'
-    | 'SOURCE_DEPENDENCY_EVENT';
+    | 'SOURCE_DEPENDENCY_EVENT'
+    | 'FORM_TEMPLATE';
   export const TargetTypeEnum = {
     Entity: 'ENTITY' as TargetTypeEnum,
     EntityContainer: 'ENTITY_CONTAINER' as TargetTypeEnum,
@@ -142,5 +143,6 @@ export namespace OrgSagebionetworksRepoModelMessageComment {
     Recordset: 'RECORDSET' as TargetTypeEnum,
     SearchIndex: 'SEARCH_INDEX' as TargetTypeEnum,
     SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as TargetTypeEnum,
+    FormTemplate: 'FORM_TEMPLATE' as TargetTypeEnum,
   };
 }

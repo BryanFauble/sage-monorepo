@@ -39,7 +39,8 @@ export namespace OrgSagebionetworksRepoModelFileFileHandleAssociation {
     | 'AccessRequirementAttachment'
     | 'DataAccessRequestAttachment'
     | 'DataAccessSubmissionAttachment'
-    | 'FormData';
+    | 'FormData'
+    | 'FormTemplateAttachment';
   export const AssociateObjectTypeEnum = {
     FileEntity: 'FileEntity' as AssociateObjectTypeEnum,
     TableEntity: 'TableEntity' as AssociateObjectTypeEnum,
@@ -54,5 +55,6 @@ export namespace OrgSagebionetworksRepoModelFileFileHandleAssociation {
     DataAccessRequestAttachment: 'DataAccessRequestAttachment' as AssociateObjectTypeEnum,
     DataAccessSubmissionAttachment: 'DataAccessSubmissionAttachment' as AssociateObjectTypeEnum,
     FormData: 'FormData' as AssociateObjectTypeEnum,
+    FormTemplateAttachment: 'FormTemplateAttachment' as AssociateObjectTypeEnum,
   };
 }

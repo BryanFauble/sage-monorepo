@@ -13,11 +13,11 @@ import { OrgSagebionetworksRepoModelRestrictableObjectDescriptor } from './org-s
 import { OrgSagebionetworksRepoModelJsonSchemaAccessRequirement } from './org-sagebionetworks-repo-model-json-schema-access-requirement';
 
 /**
- * Describes an Access Requirement that may require an accessor to enable two factor authentication.
+ * DEPRECATED, since now all accounts are required to have 2FA.  Describes an Access Requirement that may require an accessor to enable two factor authentication.
  */
 /**
  * @type OrgSagebionetworksRepoModelHasTwoFactorAuthRequirement
- * Describes an Access Requirement that may require an accessor to enable two factor authentication.
+ * DEPRECATED, since now all accounts are required to have 2FA.  Describes an Access Requirement that may require an accessor to enable two factor authentication.
  * @export
  */
 export type OrgSagebionetworksRepoModelHasTwoFactorAuthRequirement =

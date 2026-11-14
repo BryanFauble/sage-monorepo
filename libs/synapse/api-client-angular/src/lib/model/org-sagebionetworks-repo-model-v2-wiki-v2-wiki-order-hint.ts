@@ -81,7 +81,8 @@ export namespace OrgSagebionetworksRepoModelV2WikiV2WikiOrderHint {
     | 'GRID_SESSION'
     | 'RECORDSET'
     | 'SEARCH_INDEX'
-    | 'SOURCE_DEPENDENCY_EVENT';
+    | 'SOURCE_DEPENDENCY_EVENT'
+    | 'FORM_TEMPLATE';
   export const OwnerObjectTypeEnum = {
     Entity: 'ENTITY' as OwnerObjectTypeEnum,
     EntityContainer: 'ENTITY_CONTAINER' as OwnerObjectTypeEnum,
@@ -134,5 +135,6 @@ export namespace OrgSagebionetworksRepoModelV2WikiV2WikiOrderHint {
     Recordset: 'RECORDSET' as OwnerObjectTypeEnum,
     SearchIndex: 'SEARCH_INDEX' as OwnerObjectTypeEnum,
     SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as OwnerObjectTypeEnum,
+    FormTemplate: 'FORM_TEMPLATE' as OwnerObjectTypeEnum,
   };
 }

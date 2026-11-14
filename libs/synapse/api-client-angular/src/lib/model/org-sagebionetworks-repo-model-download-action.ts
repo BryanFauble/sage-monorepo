@@ -8,6 +8,7 @@
  * Do not edit the class manually.
  */
 import { OrgSagebionetworksRepoModelDownloadRequestDownload } from './org-sagebionetworks-repo-model-download-request-download';
+import { OrgSagebionetworksRepoModelDownloadAuthenticateWithIdentityProvider } from './org-sagebionetworks-repo-model-download-authenticate-with-identity-provider';
 import { OrgSagebionetworksRepoModelDownloadMeetAccessRequirement } from './org-sagebionetworks-repo-model-download-meet-access-requirement';
 import { OrgSagebionetworksRepoModelDownloadEnableTwoFa } from './org-sagebionetworks-repo-model-download-enable-two-fa';
 
@@ -20,6 +21,7 @@ import { OrgSagebionetworksRepoModelDownloadEnableTwoFa } from './org-sagebionet
  * @export
  */
 export type OrgSagebionetworksRepoModelDownloadAction =
+  | OrgSagebionetworksRepoModelDownloadAuthenticateWithIdentityProvider
   | OrgSagebionetworksRepoModelDownloadEnableTwoFa
   | OrgSagebionetworksRepoModelDownloadMeetAccessRequirement
   | OrgSagebionetworksRepoModelDownloadRequestDownload;

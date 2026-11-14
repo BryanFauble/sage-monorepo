@@ -59,7 +59,8 @@ export type OrgSagebionetworksRepoModelObjectType =
   | 'GRID_SESSION'
   | 'RECORDSET'
   | 'SEARCH_INDEX'
-  | 'SOURCE_DEPENDENCY_EVENT';
+  | 'SOURCE_DEPENDENCY_EVENT'
+  | 'FORM_TEMPLATE';
 
 export const OrgSagebionetworksRepoModelObjectType = {
   Entity: 'ENTITY' as OrgSagebionetworksRepoModelObjectType,
@@ -116,4 +117,5 @@ export const OrgSagebionetworksRepoModelObjectType = {
   Recordset: 'RECORDSET' as OrgSagebionetworksRepoModelObjectType,
   SearchIndex: 'SEARCH_INDEX' as OrgSagebionetworksRepoModelObjectType,
   SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as OrgSagebionetworksRepoModelObjectType,
+  FormTemplate: 'FORM_TEMPLATE' as OrgSagebionetworksRepoModelObjectType,
 };

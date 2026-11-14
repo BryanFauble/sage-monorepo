@@ -17,7 +17,7 @@ export interface OrgSagebionetworksRepoModelTableFacetColumnResultValueCount {
    */
   value?: string;
   /**
-   * the number of times the value appears in the column
+   * the number of times the value appears in the column. For an aggregate-only read, -1 means the count is non-zero and below the QueryResultBundle\'s suppressionThreshold, so it is masked.
    */
   count?: number;
   /**

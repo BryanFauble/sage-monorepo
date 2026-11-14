@@ -17,7 +17,7 @@ export interface OrgSagebionetworksRepoModelTableFacetColumnResultBinnedValueCou
    */
   value?: string;
   /**
-   * The inclusive lower bound of the bin that contains the exact count: floor(count / binSize) * binSize. The exact count lies within [binMin, binMin + binSize - 1].
+   * The inclusive lower bound of the bin that contains the exact count: floor(count / binSize) * binSize. The exact count lies within [binMin, binMin + binSize - 1]. -1 means the count is non-zero and below the QueryResultBundle\'s suppressionThreshold, so it is masked.
    */
   binMin?: number;
   /**

@@ -123,7 +123,8 @@ export namespace OrgSagebionetworksRepoModelFileFileEvent {
     | 'GRID_SESSION'
     | 'RECORDSET'
     | 'SEARCH_INDEX'
-    | 'SOURCE_DEPENDENCY_EVENT';
+    | 'SOURCE_DEPENDENCY_EVENT'
+    | 'FORM_TEMPLATE';
   export const ObjectTypeEnum = {
     Entity: 'ENTITY' as ObjectTypeEnum,
     EntityContainer: 'ENTITY_CONTAINER' as ObjectTypeEnum,
@@ -176,6 +177,7 @@ export namespace OrgSagebionetworksRepoModelFileFileEvent {
     Recordset: 'RECORDSET' as ObjectTypeEnum,
     SearchIndex: 'SEARCH_INDEX' as ObjectTypeEnum,
     SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as ObjectTypeEnum,
+    FormTemplate: 'FORM_TEMPLATE' as ObjectTypeEnum,
   };
   export type FileEventTypeEnum = 'FILE_DOWNLOAD' | 'FILE_UPLOAD';
   export const FileEventTypeEnum = {
@@ -195,7 +197,8 @@ export namespace OrgSagebionetworksRepoModelFileFileEvent {
     | 'AccessRequirementAttachment'
     | 'DataAccessRequestAttachment'
     | 'DataAccessSubmissionAttachment'
-    | 'FormData';
+    | 'FormData'
+    | 'FormTemplateAttachment';
   export const AssociateTypeEnum = {
     FileEntity: 'FileEntity' as AssociateTypeEnum,
     TableEntity: 'TableEntity' as AssociateTypeEnum,
@@ -210,5 +213,6 @@ export namespace OrgSagebionetworksRepoModelFileFileEvent {
     DataAccessRequestAttachment: 'DataAccessRequestAttachment' as AssociateTypeEnum,
     DataAccessSubmissionAttachment: 'DataAccessSubmissionAttachment' as AssociateTypeEnum,
     FormData: 'FormData' as AssociateTypeEnum,
+    FormTemplateAttachment: 'FormTemplateAttachment' as AssociateTypeEnum,
   };
 }

@@ -95,7 +95,8 @@ export namespace OrgSagebionetworksRepoModelTableReplicatedEvent {
     | 'GRID_SESSION'
     | 'RECORDSET'
     | 'SEARCH_INDEX'
-    | 'SOURCE_DEPENDENCY_EVENT';
+    | 'SOURCE_DEPENDENCY_EVENT'
+    | 'FORM_TEMPLATE';
   export const ObjectTypeEnum = {
     Entity: 'ENTITY' as ObjectTypeEnum,
     EntityContainer: 'ENTITY_CONTAINER' as ObjectTypeEnum,
@@ -148,6 +149,7 @@ export namespace OrgSagebionetworksRepoModelTableReplicatedEvent {
     Recordset: 'RECORDSET' as ObjectTypeEnum,
     SearchIndex: 'SEARCH_INDEX' as ObjectTypeEnum,
     SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as ObjectTypeEnum,
+    FormTemplate: 'FORM_TEMPLATE' as ObjectTypeEnum,
   };
   export type ReplicatedObjectTypeEnum =
     | 'ENTITY'
@@ -200,7 +202,8 @@ export namespace OrgSagebionetworksRepoModelTableReplicatedEvent {
     | 'GRID_SESSION'
     | 'RECORDSET'
     | 'SEARCH_INDEX'
-    | 'SOURCE_DEPENDENCY_EVENT';
+    | 'SOURCE_DEPENDENCY_EVENT'
+    | 'FORM_TEMPLATE';
   export const ReplicatedObjectTypeEnum = {
     Entity: 'ENTITY' as ReplicatedObjectTypeEnum,
     EntityContainer: 'ENTITY_CONTAINER' as ReplicatedObjectTypeEnum,
@@ -253,5 +256,6 @@ export namespace OrgSagebionetworksRepoModelTableReplicatedEvent {
     Recordset: 'RECORDSET' as ReplicatedObjectTypeEnum,
     SearchIndex: 'SEARCH_INDEX' as ReplicatedObjectTypeEnum,
     SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as ReplicatedObjectTypeEnum,
+    FormTemplate: 'FORM_TEMPLATE' as ReplicatedObjectTypeEnum,
   };
 }

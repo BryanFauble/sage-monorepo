@@ -57,6 +57,14 @@ export interface OrgSagebionetworksRepoModelTableQueryResultBundle {
    * True when a facet post-processing algorithm (e.g. rounding or noise) was applied to the returned facets, indicating the facet counts are approximate. Absent or false when the facet counts are exact.
    */
   facetPostProcessingApplied?: boolean;
+  /**
+   * True when the facet post-processing algorithm (e.g. rounding or noise) was applied to the queryCount, indicating the count is approximate. With rounding, the queryCount is the inclusive lower bound of its bin. Absent or false when the queryCount is exact.
+   */
+  queryCountPostProcessingApplied?: boolean;
+  /**
+   * The suppression threshold (k) of an aggregate-only read or an aggregate data preview. A facet count, or a count cell in the query results, of -1 is a non-zero count below this threshold that has been masked. Absent when the read is not aggregate-only.
+   */
+  suppressionThreshold?: number;
 }
 export namespace OrgSagebionetworksRepoModelTableQueryResultBundle {
   export type ConcreteTypeEnum = 'org.sagebionetworks.repo.model.table.QueryResultBundle';

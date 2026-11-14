@@ -67,7 +67,8 @@ export namespace OrgSagebionetworksRepoModelAgentAgentChatAttachmentStatus {
     | 'AccessRequirementAttachment'
     | 'DataAccessRequestAttachment'
     | 'DataAccessSubmissionAttachment'
-    | 'FormData';
+    | 'FormData'
+    | 'FormTemplateAttachment';
   export const AssociateObjectTypeEnum = {
     FileEntity: 'FileEntity' as AssociateObjectTypeEnum,
     TableEntity: 'TableEntity' as AssociateObjectTypeEnum,
@@ -82,6 +83,7 @@ export namespace OrgSagebionetworksRepoModelAgentAgentChatAttachmentStatus {
     DataAccessRequestAttachment: 'DataAccessRequestAttachment' as AssociateObjectTypeEnum,
     DataAccessSubmissionAttachment: 'DataAccessSubmissionAttachment' as AssociateObjectTypeEnum,
     FormData: 'FormData' as AssociateObjectTypeEnum,
+    FormTemplateAttachment: 'FormTemplateAttachment' as AssociateObjectTypeEnum,
   };
   export type StatusEnum = 'STAGED' | 'FAILED';
   export const StatusEnum = {
