@@ -13,7 +13,28 @@
  */
 export interface OrgSagebionetworksRepoModelAuthCallersContext {
   /**
-   * Each web service request is issue a unique session ID (UUID) that is included in the call\'s access recored.  Events that are triggered by a web service request should include the session ID so that they can be linked to each other and the call\'s access record.
+   * Each web service request is issue a unique session ID (UUID) that is included in the call\'s access record.  Events that are triggered by a web service request should include the session ID so that they can be linked to each other and the call\'s access record.
    */
   sessionId?: string;
+  /**
+   * Identity Provider names
+   */
+  identityProvider?: OrgSagebionetworksRepoModelAuthCallersContext.IdentityProviderEnum;
+}
+export namespace OrgSagebionetworksRepoModelAuthCallersContext {
+  export type IdentityProviderEnum =
+    | 'SYNAPSE'
+    | 'GOOGLE_OAUTH_2_0'
+    | 'ORCID'
+    | 'ARCUS_BIOSCIENCES'
+    | 'SAGE_BIONETWORKS'
+    | 'NIH_RESEARCHER_AUTH_SERVICE';
+  export const IdentityProviderEnum = {
+    Synapse: 'SYNAPSE' as IdentityProviderEnum,
+    GoogleOauth20: 'GOOGLE_OAUTH_2_0' as IdentityProviderEnum,
+    Orcid: 'ORCID' as IdentityProviderEnum,
+    ArcusBiosciences: 'ARCUS_BIOSCIENCES' as IdentityProviderEnum,
+    SageBionetworks: 'SAGE_BIONETWORKS' as IdentityProviderEnum,
+    NihResearcherAuthService: 'NIH_RESEARCHER_AUTH_SERVICE' as IdentityProviderEnum,
+  };
 }

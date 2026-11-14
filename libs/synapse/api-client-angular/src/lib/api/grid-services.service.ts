@@ -57,6 +57,8 @@ import { OrgSagebionetworksRepoModelGridGridReplica } from '../model/org-sagebio
 // @ts-ignore
 import { OrgSagebionetworksRepoModelGridGridSession } from '../model/org-sagebionetworks-repo-model-grid-grid-session';
 // @ts-ignore
+import { OrgSagebionetworksRepoModelGridGridSourceStatus } from '../model/org-sagebionetworks-repo-model-grid-grid-source-status';
+// @ts-ignore
 import { OrgSagebionetworksRepoModelGridGridUpdateJobRequest } from '../model/org-sagebionetworks-repo-model-grid-grid-update-job-request';
 // @ts-ignore
 import { OrgSagebionetworksRepoModelGridGridUpdateJobResponse } from '../model/org-sagebionetworks-repo-model-grid-grid-update-job-response';
@@ -985,6 +987,113 @@ export class GridServicesService {
 
     let localVarPath = `/repo/v1/grid/session/${this.configuration.encodeParam({ name: 'sessionId', value: sessionId, in: 'path', style: 'simple', explode: false, dataType: 'string', dataFormat: undefined })}/replica/${this.configuration.encodeParam({ name: 'replicaId', value: replicaId, in: 'path', style: 'simple', explode: false, dataType: 'number', dataFormat: undefined })}`;
     return this.httpClient.request<OrgSagebionetworksRepoModelGridGridReplica>(
+      'get',
+      `${this.configuration.basePath}${localVarPath}`,
+      {
+        context: localVarHttpContext,
+        responseType: <any>responseType_,
+        withCredentials: this.configuration.withCredentials,
+        headers: localVarHeaders,
+        observe: observe,
+        transferCache: localVarTransferCache,
+        reportProgress: reportProgress,
+      },
+    );
+  }
+
+  /**
+   * @param sessionId - The grid session ID.
+   * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+   * @param reportProgress flag to report request and response progress.
+   */
+  public getRepoV1GridSessionSessionIdSourceStatus(
+    sessionId: string,
+    observe?: 'body',
+    reportProgress?: boolean,
+    options?: {
+      httpHeaderAccept?: 'application/json';
+      context?: HttpContext;
+      transferCache?: boolean;
+    },
+  ): Observable<OrgSagebionetworksRepoModelGridGridSourceStatus>;
+  public getRepoV1GridSessionSessionIdSourceStatus(
+    sessionId: string,
+    observe?: 'response',
+    reportProgress?: boolean,
+    options?: {
+      httpHeaderAccept?: 'application/json';
+      context?: HttpContext;
+      transferCache?: boolean;
+    },
+  ): Observable<HttpResponse<OrgSagebionetworksRepoModelGridGridSourceStatus>>;
+  public getRepoV1GridSessionSessionIdSourceStatus(
+    sessionId: string,
+    observe?: 'events',
+    reportProgress?: boolean,
+    options?: {
+      httpHeaderAccept?: 'application/json';
+      context?: HttpContext;
+      transferCache?: boolean;
+    },
+  ): Observable<HttpEvent<OrgSagebionetworksRepoModelGridGridSourceStatus>>;
+  public getRepoV1GridSessionSessionIdSourceStatus(
+    sessionId: string,
+    observe: any = 'body',
+    reportProgress: boolean = false,
+    options?: {
+      httpHeaderAccept?: 'application/json';
+      context?: HttpContext;
+      transferCache?: boolean;
+    },
+  ): Observable<any> {
+    if (sessionId === null || sessionId === undefined) {
+      throw new Error(
+        'Required parameter sessionId was null or undefined when calling getRepoV1GridSessionSessionIdSourceStatus.',
+      );
+    }
+
+    let localVarHeaders = this.defaultHeaders;
+
+    let localVarCredential: string | undefined;
+    // authentication (bearerAuth) required
+    localVarCredential = this.configuration.lookupCredential('bearerAuth');
+    if (localVarCredential) {
+      localVarHeaders = localVarHeaders.set('Authorization', 'Bearer ' + localVarCredential);
+    }
+
+    let localVarHttpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+    if (localVarHttpHeaderAcceptSelected === undefined) {
+      // to determine the Accept header
+      const httpHeaderAccepts: string[] = ['application/json'];
+      localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+    }
+    if (localVarHttpHeaderAcceptSelected !== undefined) {
+      localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
+    }
+
+    let localVarHttpContext: HttpContext | undefined = options && options.context;
+    if (localVarHttpContext === undefined) {
+      localVarHttpContext = new HttpContext();
+    }
+
+    let localVarTransferCache: boolean | undefined = options && options.transferCache;
+    if (localVarTransferCache === undefined) {
+      localVarTransferCache = true;
+    }
+
+    let responseType_: 'text' | 'json' | 'blob' = 'json';
+    if (localVarHttpHeaderAcceptSelected) {
+      if (localVarHttpHeaderAcceptSelected.startsWith('text')) {
+        responseType_ = 'text';
+      } else if (this.configuration.isJsonMime(localVarHttpHeaderAcceptSelected)) {
+        responseType_ = 'json';
+      } else {
+        responseType_ = 'blob';
+      }
+    }
+
+    let localVarPath = `/repo/v1/grid/session/${this.configuration.encodeParam({ name: 'sessionId', value: sessionId, in: 'path', style: 'simple', explode: false, dataType: 'string', dataFormat: undefined })}/source/status`;
+    return this.httpClient.request<OrgSagebionetworksRepoModelGridGridSourceStatus>(
       'get',
       `${this.configuration.basePath}${localVarPath}`,
       {

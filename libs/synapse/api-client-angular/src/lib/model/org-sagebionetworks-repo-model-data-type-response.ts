@@ -87,7 +87,8 @@ export namespace OrgSagebionetworksRepoModelDataTypeResponse {
     | 'GRID_SESSION'
     | 'RECORDSET'
     | 'SEARCH_INDEX'
-    | 'SOURCE_DEPENDENCY_EVENT';
+    | 'SOURCE_DEPENDENCY_EVENT'
+    | 'FORM_TEMPLATE';
   export const ObjectTypeEnum = {
     Entity: 'ENTITY' as ObjectTypeEnum,
     EntityContainer: 'ENTITY_CONTAINER' as ObjectTypeEnum,
@@ -140,6 +141,7 @@ export namespace OrgSagebionetworksRepoModelDataTypeResponse {
     Recordset: 'RECORDSET' as ObjectTypeEnum,
     SearchIndex: 'SEARCH_INDEX' as ObjectTypeEnum,
     SourceDependencyEvent: 'SOURCE_DEPENDENCY_EVENT' as ObjectTypeEnum,
+    FormTemplate: 'FORM_TEMPLATE' as ObjectTypeEnum,
   };
   export type DataTypeEnum = 'SENSITIVE_DATA' | 'OPEN_DATA' | 'AGGREGATE_DATA';
   export const DataTypeEnum = {

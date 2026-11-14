@@ -94,6 +94,10 @@ export interface OrgSagebionetworksRepoModelManagedACTAccessRequirement {
    */
   isTwoFaRequired?: boolean;
   /**
+   * If not empty, then accessor must have authenticated through one of the listed identity providers. If null or empty, then there is no requirement on how the accessor authenticated.
+   */
+  identityProviders?: Array<OrgSagebionetworksRepoModelManagedACTAccessRequirement.IdentityProvidersEnum>;
+  /**
    * If true, then accessor needs to submit an Institutional Review Board (IRB) Approval document to gain access to the data.
    */
   isIRBApprovalRequired?: boolean;
@@ -154,5 +158,20 @@ export namespace OrgSagebionetworksRepoModelManagedACTAccessRequirement {
   export const ConcreteTypeEnum = {
     OrgSagebionetworksRepoModelManagedActAccessRequirement:
       'org.sagebionetworks.repo.model.ManagedACTAccessRequirement' as ConcreteTypeEnum,
+  };
+  export type IdentityProvidersEnum =
+    | 'SYNAPSE'
+    | 'GOOGLE_OAUTH_2_0'
+    | 'ORCID'
+    | 'ARCUS_BIOSCIENCES'
+    | 'SAGE_BIONETWORKS'
+    | 'NIH_RESEARCHER_AUTH_SERVICE';
+  export const IdentityProvidersEnum = {
+    Synapse: 'SYNAPSE' as IdentityProvidersEnum,
+    GoogleOauth20: 'GOOGLE_OAUTH_2_0' as IdentityProvidersEnum,
+    Orcid: 'ORCID' as IdentityProvidersEnum,
+    ArcusBiosciences: 'ARCUS_BIOSCIENCES' as IdentityProvidersEnum,
+    SageBionetworks: 'SAGE_BIONETWORKS' as IdentityProvidersEnum,
+    NihResearcherAuthService: 'NIH_RESEARCHER_AUTH_SERVICE' as IdentityProvidersEnum,
   };
 }

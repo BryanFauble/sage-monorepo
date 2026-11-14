@@ -25,7 +25,7 @@ export interface OrgSagebionetworksRepoModelDataaccessSchemaFormTemplateField {
    */
   submissionContext?: OrgSagebionetworksRepoModelDataaccessSchemaFormTemplateField.SubmissionContextEnum;
   /**
-   * A Synapse FileHandle ID used to download a template file for this slot. Intended only for slots whose target schema property uses the \'synapse-filehandle-id\' format. The file can be downloaded using FileHandleAssociateType.AccessRequirementAttachment.
+   * A Synapse FileHandle ID used to download a template file for this slot. Intended only for slots whose target schema property uses the \'synapse-filehandle-id\' format. The ID must also be listed in the template\'s attachments. The file can be downloaded using FileHandleAssociateType.FormTemplateAttachment, with the template ID as the associateObjectId.
    */
   templateFileHandleId?: string;
   /**

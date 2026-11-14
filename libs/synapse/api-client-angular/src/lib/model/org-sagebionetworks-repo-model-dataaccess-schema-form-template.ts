@@ -41,4 +41,8 @@ export interface OrgSagebionetworksRepoModelDataaccessSchemaFormTemplate {
    * Marking a template as deprecated will hide it from search results by default. It does not affect Access Requirements that already reference this template. Default is \'false\'.
    */
   deprecated?: boolean;
+  /**
+   * The IDs of the FileHandles that can be downloaded through this template, e.g. the template documents of its fields. Every FormTemplateField.templateFileHandleId of this version must be listed; documents not tied to a field may also be listed. IDs must be numeric and unique. When creating a version, the caller must be the creator of each listed FileHandle that no earlier version of the template lists. Any authenticated user can download a FileHandle listed by any version of the template using FileHandleAssociateType.FormTemplateAttachment, with the template ID as the associateObjectId.
+   */
+  attachments?: Array<string>;
 }

@@ -94,6 +94,10 @@ export interface OrgSagebionetworksRepoModelJsonSchemaAccessRequirement {
    * If true, then accessor needs to enable two factor authentication before gaining access to the data.
    */
   isTwoFaRequired?: boolean;
+  /**
+   * If not empty, then accessor must have authenticated through one of the listed identity providers. If null or empty, then there is no requirement on how the accessor authenticated.
+   */
+  identityProviders?: Array<OrgSagebionetworksRepoModelJsonSchemaAccessRequirement.IdentityProvidersEnum>;
   formTemplateRef?: OrgSagebionetworksRepoModelDataaccessSchemaFormTemplateReference;
 }
 export namespace OrgSagebionetworksRepoModelJsonSchemaAccessRequirement {
@@ -140,5 +144,20 @@ export namespace OrgSagebionetworksRepoModelJsonSchemaAccessRequirement {
   export const ConcreteTypeEnum = {
     OrgSagebionetworksRepoModelJsonSchemaAccessRequirement:
       'org.sagebionetworks.repo.model.JsonSchemaAccessRequirement' as ConcreteTypeEnum,
+  };
+  export type IdentityProvidersEnum =
+    | 'SYNAPSE'
+    | 'GOOGLE_OAUTH_2_0'
+    | 'ORCID'
+    | 'ARCUS_BIOSCIENCES'
+    | 'SAGE_BIONETWORKS'
+    | 'NIH_RESEARCHER_AUTH_SERVICE';
+  export const IdentityProvidersEnum = {
+    Synapse: 'SYNAPSE' as IdentityProvidersEnum,
+    GoogleOauth20: 'GOOGLE_OAUTH_2_0' as IdentityProvidersEnum,
+    Orcid: 'ORCID' as IdentityProvidersEnum,
+    ArcusBiosciences: 'ARCUS_BIOSCIENCES' as IdentityProvidersEnum,
+    SageBionetworks: 'SAGE_BIONETWORKS' as IdentityProvidersEnum,
+    NihResearcherAuthService: 'NIH_RESEARCHER_AUTH_SERVICE' as IdentityProvidersEnum,
   };
 }
